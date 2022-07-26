@@ -1,0 +1,39 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %} 
+My Blog 
+{% endblock %} 
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}" />
+  <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
+
+{% block content %}
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/ax.jpeg" %}" alt="Alireza - The Author Of This Blog" />
+    <h2>ALIREZA'S BLOG</h2>
+  </header>
+  <p>Hi, I am Alireza and I love to blog about tech and the world!</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+
+  <ul>
+    {% for post in posts %}
+      {% include "blog/includes/post.html" %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="about">
+  <h2>About Me!</h2>
+  <p>
+    I studied Bachelor of Applied Mathematics at the University of Tehran. 
+    <br> I have worked as a software engineer since Apr 2020. 
+  </p>
+</section>
+{% endblock %}
