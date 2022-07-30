@@ -8,7 +8,7 @@ This personal blog is a website where I can record my thought or experiences or 
 
 ## Getting Started
 
-### Dependencies
+### Requirements
 
 Django==4.0.6
 Pillow==9.2.0
@@ -16,26 +16,14 @@ python-decouple==3.6
 
 ### Installing
 
-* install python:
-<https://www.python.org/downloads/>
-
-* install Django (Mac and Linux):
-
 ```
-python -m pip install Django 
+$ pip install -r requirements.txt
 ```
 
-* install Django (Windows):
+### Admin Panel
 
-```
-...\> py -m pip install Django
-```
-
-* install Pillow:
-
-```
-python3 -m pip install --upgrade Pillow
-```
+username: admin
+password: admin
 
 ## Authors
 
